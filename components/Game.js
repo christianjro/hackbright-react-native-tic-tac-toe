@@ -1,5 +1,6 @@
 import { StyleSheet, ScrollView, View, Text } from "react-native";
 import Board from './Board';
+import Move from './Move';
 
 export default function Game() {
     return (
@@ -8,7 +9,7 @@ export default function Game() {
                 <Board />
             </View>
             <ScrollView style={styles.movesContainer} contentContainerStyle={styles.movesContainerContent}>
-                <Text>Moves placeholder</Text>
+                <Move />
             </ScrollView>
         </>
     )
@@ -17,18 +18,15 @@ export default function Game() {
 const styles = StyleSheet.create({
     boardContainer: {
         flex: 1,
-        backgroundColor: '#cccccc',
         alignItems: 'center',
         justifyContent: 'center',
     },
     movesContainer: {
         flex: 1,
-        backgroundColor: '#dddddd',
         padding: 10,
     },
     movesContainerContent: {
         alignItems: 'center',
         justifyContent: 'top',
-        backgroundColor: '#ffffff'
     },
   });
